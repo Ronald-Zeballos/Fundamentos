@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float radio, area;
+cout <<"ingresar el radio: "<<endl;
+  cin>> radio;
+  area= (radio*radio)*3.141516;
+  cout<<"el valor del area de la circunferencia es:  "<< area;
+  return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    float numero1, numero2, resultado;
+    cout<<"ingrese el valor del numero1"<< endl;
+    cin>> numero1;
+    cout<<"ingresar el valor del numero2"<< endl;
+    cin>> numero2;
+    
+    
+  resultado= numero1 + numero2;
+  cout<<"el resultado de la suma es:"<< resultado <<endl;
+  
+   resultado= numero1 - numero2;
+  cout<<"el resultado de la resta es:"<<  resultado <<endl;
+  
+   resultado= numero1 * numero2;
+  cout<< "el resultado de la multiplicacion es :"<<  resultado<< endl;
+  
+   resultado= numero1 / numero2;
+  cout<< "el resultado de la ddivicion es :"<<  resultado<< endl;
+  
+ 
+  return 0;
+  
+
+}

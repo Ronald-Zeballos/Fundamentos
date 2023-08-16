@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float parcial1, parcial2, parcial3,examenfinal, proyectofinal, notafinal; // declaracion de variables 
+    cout<<"ingresar la nota del primer parcial:  ";
+    cin>> parcial1;
+    cout<<"ingresar la nota del segundo parcial:  ";
+    cin>> parcial2;
+    cout<<"ingresar la nota del tercer parcial:  ";
+    cin>> parcial3;
+    cout<<"ingresar la nota del examen final:  ";
+    cin>> examenfinal;
+    cout<<"ingresar la nota del proyecto final:  ";
+    cin>> proyectofinal;
+    notafinal=(parcial1+ parcial2+parcial3)* 0.4 + examenfinal* 0.4 + proyectofinal* 0.2;
+    cout<<"la nota final del alumno es: "<< notafinal<< endl;
+    return 0;
+}

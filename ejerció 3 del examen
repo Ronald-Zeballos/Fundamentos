@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+   float a,presupuesto;
+   int opcion;
+   cout<<"ingresar el presupuesto"<<endl;
+   cin>>presupuesto;
+   cout<<"------areas------"<<endl;
+   cout<<"1. medico1       "<<endl;
+   cout<<"2. medico2       "<<endl;
+   cout<<"3. medico3       "<<endl;
+   cout<<"-----------------"<<endl;
+   cout<<"cual es el area que quieres saber el presupuesto: ";
+   cin>>opcion;
+   switch (opcion)
+   {
+       case 1: a=presupuesto*0.20;break;
+       case 2: a=presupuesto*0.40;break;
+       case 3: a=presupuesto*0.40;break;
+       default: cout<<"area invalida";
+   }
+    cout<<"el valor del presupuesto del area que elegiste es: "<<a<<endl;
+   return 0;
+}

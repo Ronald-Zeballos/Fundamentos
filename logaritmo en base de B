@@ -2,7 +2,7 @@
 #include <cmath>
 
 using namespace std;
-
+// dado un logaritmo de forma log2 x-1/8log2 x=B, donde B es un numero dado entre los reales, dado B hallar x
 int main()
 {
     double B, resultado;
@@ -10,8 +10,9 @@ int main()
     cout << "Ingresar el valor de B: ";
     cin >> B;
     
-    x = pow(pow(2, 8 * B), 1.0 / 7); // Usar 1.0 para obtener una división en punto flotante
+    x = pow(pow(2, 8 * B), 1.0 / 7); 
     cout << "El resultado de la ecuación es: " << x << endl;
     
     return 0;
 }
+

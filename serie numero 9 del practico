@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int  N, i, signo = 1;  //totalizador empieza por 1
+    float X,  f = 1, acum = 0;
+    do {
+        cout << "ingresar el numero de elemetos: ";
+        cin >> N;
+    } while (N < 0); //validar el ingreso de N considerando que se repita si no es el valor correcto
+    do {
+        cout << "ingresar el valor de la serie X: ";
+        cin >> X;
+    } while (N < 0); //validar el ingreso de N considerando que se repita si no es el valor correcto
+    for ( i = 1; i <= N; i++)
+    {
+        acum = acum + signo * pow(X, i) / f;
+        f = f * (i+1);
+        signo = -signo;
+    }
+    cout << "el resultado de la serie es" << N << " es: " << acum;
+    return 0;
+}
+

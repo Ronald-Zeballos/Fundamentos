@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i, N, acum = 1;  //totalizador empieza por 1
+    do {
+        cout << "ingresar el numero de elementos: ";
+        cin >> N;
+    } while (N < 0); //validar el ingreso de N considerando que se repita si no es el valor correcto
+    for ( i = 2; i <= N; i++)
+    {
+        acum = acum * i;
+    }
+    cout << "el factorial de " << N << " es: " << acum;
+    return 0;
+}

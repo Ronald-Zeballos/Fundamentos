@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char continuar = 's';
+
+    while (continuar == 's' || continuar == 'S') {
+        int n;
+        cout << "Ingrese un número entero n: ";
+        cin >> n;
+
+        int suma = 0;
+
+        if (n < 10) {
+            for (int i = 1; i <= n; ++i) {
+                suma += i;
+            }
+            cout << "Suma de números menores a 10: " << suma << endl;
+        } else if (n >= 10 && n <= 50) {
+            for (int i = 10; i <= n; ++i) {
+                suma += i;
+            }
+            cout << "Suma de números entre 10 y 50: " << suma << endl;
+        } else {
+            for (int i = 51; i <= n; ++i) {
+                suma += i;
+            }
+            cout << "Suma de números mayores a 50: " << suma << endl;
+        }
+
+        cout << "¿Desea ingresar otro número? (s/n): ";
+        cin >> continuar;
+    }
+
+    return 0;
+}

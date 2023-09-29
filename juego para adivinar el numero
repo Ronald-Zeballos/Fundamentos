@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+  
+    srand(time(nullptr));
+    
+    int numeroSecreto = rand() % 100 + 1;
+
+    int intentos = 0;
+    int intentoUsuario;
+
+    cout << "¡Bienvenido al juego de adivinar el número!" << endl;
+
+    do {
+        cout << "Ingresa un número entre 1 y 100: ";
+        cin >> intentoUsuario;
+        intentos++;
+
+        if (intentoUsuario < numeroSecreto) {
+            cout << "El número es más grande. Intenta de nuevo." << endl;
+        } else if (intentoUsuario > numeroSecreto) {
+            cout << "El número es más pequeño. Intenta de nuevo." << endl;
+        } else {
+            cout << "¡Felicidades! Has adivinado el número " << numeroSecreto << " en " << intentos << " intentos." << endl;
+        }
+    } while (intentoUsuario != numeroSecreto);
+
+    return 0;
+}

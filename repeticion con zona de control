@@ -1,0 +1,26 @@
+//Ronald Zeballos
+#include <iostream>
+using namespace std;
+int main()
+
+
+
+
+//zona de control ciclo de repeticion 
+{   
+	
+	float precio, descuento, precioFinal, suma = 0;
+	cout << "introduzca el precio: (-999 para terminar) ";
+	cin >> precio;
+	while (precio!=-999){
+		cout << "introduzca el porcentaje de descueto: ";
+		cin >> descuento;
+		precioFinal = precio - (precio * (descuento / 100));
+		suma += precioFinal;
+		cout << "el precio final con descuento es de : " << precioFinal << endl;
+		return 0;
+	}
+	cout << "el monto total es: " << suma << endl;
+	return 0;
+
+}

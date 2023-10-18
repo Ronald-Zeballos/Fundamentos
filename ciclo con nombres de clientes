@@ -18,7 +18,10 @@ int main()
 		precioFinal = precio - (precio * (descuento / 100));
 		suma += precioFinal;
 		cout << "el precio final con descuento es de : " << precioFinal << endl;
+		cout << "s: continual   S: para salir"<<endl;
+		cout<<"   :   "
 		cin >> resp;
+
 	} while ((resp == 's') || (resp == 'S'));
 	cout << "el monto total es: " << suma << endl;
 	return 0;

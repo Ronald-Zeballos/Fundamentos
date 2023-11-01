@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float calcularVentasTotales(const float ventas[], int numProductos);
+void ingresarVentas(string productos[], float ventas[], int& numProductos);
+const int MAX_PRODUCTOS = 100;
+int main() {
+    string productos[MAX_PRODUCTOS];
+    float ventas[MAX_PRODUCTOS];
+    int numProductos = 0;
+
+    ingresarVentas(productos, ventas, numProductos);
+
+    float ventasTotales = calcularVentasTotales(ventas, numProductos);
+
+    cout << "Ventas totales realizadas: $" << ventasTotales << endl;
+
+    return 0;
+}
+
+void ingresarVentas(string productos[], float ventas[], int& numProductos) {
+    cout << "Ingresar datos de ventas:" << endl;
+    cout << "Cantidad de productos: ";
+    cin >> numProductos;
+
+    for (int i = 0; i < numProductos; i++) {
+        cout << "Producto " << i + 1 << ": ";
+        cin.ignore();
+        getline(cin, productos[i]);
+        cout << "Venta para " << productos[i] << ": $";
+        cin >> ventas[i];
+    }
+}
+
+float calcularVentasTotales(const float ventas[], int numProductos) {
+    float ventasTotales = 0;
+    for (int i = 0; i < numProductos; i++) {
+        ventasTotales += ventas[i];
+    }
+    return ventasTotales;
+}
